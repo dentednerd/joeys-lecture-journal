@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="pizza.js" defer></script>
+  <title>Joey's House Of Pizza</title>
+</head>
+<body>
+  <h1 id="title" class="heading">Joey's House Of Pizza</h1>
+  <main>
+    <section>
+      <h2 class="heading">Choose your toppings:</h2>
+      <ul id="topping-choices">
+        <li onclick="addTopping('mushroom')">mushroom</li>
+        <li onclick="addTopping('fried egg')">fried egg</li>
+        <li onclick="addTopping('sweetcorn')">sweetcorn</li>
+        <li onclick="addTopping('cheese')">cheese</li>
+        <li onclick="addTopping('pepperoni')">pepperoni</li>
+      </ul>
+    </section>
+    <section>
+      <h2 class="heading">Your pizza:</h2>
+      <ul id="chosen-toppings"></ul>
+    </section>
+    <section>
+      <h2 class="heading">How do you feel about cool beans on pizza?</h2>
+      <button id="emoji" onclick="vote()">😀</button>
+    </section>
+  </main>
+</body>
+</html>
