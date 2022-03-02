@@ -1,0 +1,14 @@
+{
+  "name": "20220303-prototypes-seminar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Hangman.js",
+  "scripts": {
+    "test": "jest ./Hangman.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.5.1"
+  }
+}

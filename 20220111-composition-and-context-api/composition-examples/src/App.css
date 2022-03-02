@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+}
+
+.fancy {
+  border: 6px double rebeccapurple;
+}
+
+.postIt {
+  text-align: left;
+  background: linear-gradient(
+    135deg,
+    #ffff88 81%,
+    #ffff88 82%,
+    #ffff88 82%,
+    #ffffc6 100%
+  );
+  border: 1px solid #e8e8e8;
+  width: 15em;
+  height: 15em;
+  margin: auto;
+  box-shadow: 2px 2px 4px 0px grey;
+  border-bottom-right-radius: 60px 5px;
+  padding: 1em;
+}
+
+.postIt__title {
+  border-bottom: 1px solid black;
+}

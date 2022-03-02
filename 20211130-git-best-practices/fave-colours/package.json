@@ -1,0 +1,23 @@
+{
+  "name": "fave-colours",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sayFaveColour.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint",
+    "start": "node sayFaveColour.js"
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "npm t",
+      "posttest": "eslint ./ --fix"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.3.0",
+    "husky": "^7.0.4"
+  }
+}
