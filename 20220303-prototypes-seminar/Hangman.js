@@ -12,7 +12,22 @@ Hangman will have a guessLetter method that will take a letter to guess and eith
 */
 
 function Hangman(wordToGuess) {
-  //
+  this.wordToGuess = wordToGuess;
+  this.lives = 5;
+  this.correctLetters = new Array(wordToGuess.length).fill('');
+}
+
+Hangman.prototype.guess = function (letter) {
+  const indexOfLetter = this.wordToGuess.indexOf(letter);
+
+  if (indexOfLetter !== -1) {
+    this.correctLetters[indexOfLetter] = letter;
+  } else {
+    this.lives--;
+    if (this.lives <= 0) {
+      return 'Game over!';
+    }
+  };
 }
 
 module.exports = Hangman;
