@@ -4,13 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha spec"
+    "test": "jest ./challenges"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^4.3.6",
-    "mocha": "^9.2.1",
-    "sinon": "^13.0.1"
+    "jest": "^27.5.1"
   }
 }

@@ -8,13 +8,17 @@ class VendingMachine {
     this.stock[position] = { ...newStock };
     this.stock[position].price = `${this.stock[position].price}p`;
   }
+
   addCredit(amount) {
     this.credit += amount;
   }
+
   purchaseItem(position) {
     const item = this.stock[position];
     const price = parseInt(item.price);
-    if (price > this.credit) return 'Insufficient credit!';
+    if (price > this.credit) {
+      return 'Insufficient credit!';
+    }
     item.quantity--;
     this.credit -= price;
     return item.name;
