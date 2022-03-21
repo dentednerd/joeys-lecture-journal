@@ -30,7 +30,6 @@ describe('checkServerStatus()', () => {
     checkServerStatus(testCB);
   });
 });
-
 describe('fetchBannerContent()', () => {
   test('invokes the callback with no error', done => {
     jest.setTimeout(1000);
@@ -64,7 +63,6 @@ describe('fetchBannerContent()', () => {
     fetchBannerContent(testCB);
   });
 });
-
 describe('fetchAllOwners()', () => {
   test('invokes the callback with no error', done => {
     jest.setTimeout(1000);
@@ -95,7 +93,6 @@ describe('fetchAllOwners()', () => {
     fetchAllOwners(testCB);
   });
 });
-
 describe('fetchCatsByOwner()', () => {
   test('invokes the callback with no error when given a valid owner', done => {
     jest.setTimeout(1000);
@@ -135,7 +132,6 @@ describe('fetchCatsByOwner()', () => {
     });
   });
 });
-
 describe('fetchCatPics()', () => {
   test('invokes the callback function with no error', done => {
     jest.setTimeout(1000);
@@ -185,7 +181,6 @@ describe('fetchCatPics()', () => {
     );
   });
 });
-
 describe('fetchAllCats()', () => {
   test('invokes the callback with no error', done => {
     jest.setTimeout(1000);
@@ -216,7 +211,7 @@ describe('fetchAllCats()', () => {
   });
 });
 
-describe('fetchOwnersWithCats()', () => {
+describe.only('fetchOwnersWithCats()', () => {
   test('invokes the callback function with no error', done => {
     jest.setTimeout(1000);
 
@@ -273,7 +268,6 @@ describe('kickLegacyServerUntilItWorks()', () => {
     kickLegacyServerUntilItWorks(testCB);
   });
 });
-
 describe('buySingleOutfit()', () => {
   test('invokes the callback with no error when given a valid outfit', done => {
     jest.setTimeout(1000);

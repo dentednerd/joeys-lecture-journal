@@ -6,7 +6,6 @@ function checkServerStatus(cb) {
     cb(null, data);
   })
 }
-
 function fetchBannerContent(cb) {
   request('/banner', (err, data) => {
     if (err) throw new Error;
@@ -52,7 +51,6 @@ function fetchCatPics(catsArray, cb) {
   });
 
 }
-
 function fetchAllCats(cb) {
   const allCats = [];
   fetchAllOwners((err, owners) => {
@@ -72,27 +70,28 @@ function fetchAllCats(cb) {
 }
 
 function fetchOwnersWithCats(cb) {
-  const allOwnersWithCats = [];
+  const result = [];
   let counter = 0;
+
   fetchAllOwners((err, owners) => {
     if (err) {
       throw new Error;
     } else {
-      owners.forEach((owner, i) => {
+      owners.forEach((owner, index) => {
         fetchCatsByOwner(owner, (err, cats) => {
           if (err) {
             throw new Error;
           } else {
-            allOwnersWithCats[i] = { owner, cats };
+            result[index] = { owner, cats };
             if (++counter === owners.length) {
-              cb(null, allOwnersWithCats);
-            }
+              cb(null, result);
+            };
           };
         });
       });
     };
   });
-}
+};
 
 function kickLegacyServerUntilItWorks(cb) {
   request('/legacy-status', (err, status) => {
@@ -103,7 +102,6 @@ function kickLegacyServerUntilItWorks(cb) {
     }
   })
 }
-
 function buySingleOutfit(outfit, cb) {
   let ableToCheckout = true;
   request(`/outfits/${outfit}`, (err, checkout) => {
@@ -117,7 +115,6 @@ function buySingleOutfit(outfit, cb) {
     }
   })
 }
-
 module.exports = {
   buySingleOutfit,
   checkServerStatus,
