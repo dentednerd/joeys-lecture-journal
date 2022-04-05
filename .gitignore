@@ -1,2 +1,4 @@
 */space-facts-philippa
 **/node_modules
+.vscode
+.DS_Store

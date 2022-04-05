@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign up</title>
+    <link rel="stylesheet" href="./main.css" />
+    <script src="./signup.js" defer></script>
+  </head>
+  <body>
+    <h1>Paul's Pet Emporium</h1>
+    <form
+      action="./welcome.html"
+      method="GET"
+      class="signup__form"
+      id="signup__form"
+    >
+      <label
+        for="signup__username"
+        class="signup__label"
+      >
+        Username:
+      </label>
+      <p>Only letters and numbers please</p>
+      <input
+        id="signup__username"
+        type="text"
+        name="username"
+        class="signup__input"
+        autocomplete="off"
+        required
+      />
+      <p id="username-error"></p>
+
+      <label
+        for="signup-petChoice"
+        class="signup__label"
+      >
+        What type of pet are you looking for?
+      </label>
+      <select
+        id="signup-petChoice"
+        name="petChoice"
+        class="signup__input"
+        required
+      >
+        <option value="" selected disabled>Please select an option</option>
+        <option value="cat">patto ur catto</option>
+        <option value="dog">pupperoni pizza</option>
+        <option value="pigeon">by order of the peaky pigeon</option>
+      </select>
+
+      <button
+        type="submit"
+        class="signup__submit"
+      >
+        Give me a pet plz
+      </button>
+    </form>
+  </body>
+</html>
